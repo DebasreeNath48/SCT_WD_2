@@ -1,0 +1,95 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: #ffffff;
+}
+
+.stopwatch {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.display {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db;
+    }
+    to {
+        text-shadow: 0 0 20px #8e44ad, 0 0 30px #8e44ad, 0 0 40px #8e44ad, 0 0 50px #8e44ad;
+    }
+}
+
+.buttons button {
+    font-size: 18px;
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+#startPauseBtn {
+    background-color: #28a745;
+}
+
+#startPauseBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#resetBtn {
+    background-color: #dc3545;
+}
+
+#resetBtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+#lapBtn {
+    background-color: #007bff;
+}
+
+#lapBtn:hover {
+    background-color: #0069d9;
+    transform: scale(1.05);
+}
+
+.laps {
+    margin-top: 30px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.laps div {
+    font-size: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.laps div:hover {
+    transform: scale(1.02);
+}
